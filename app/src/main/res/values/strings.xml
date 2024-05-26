@@ -2,5 +2,12 @@
     <string name="app_name">AppDogsTeam</string>
     <string name="title_searchFriend">Search Friend</string>
     <string name="text_btn_back">Atrás</string>
+    <string name="search">Search</string>
+    <string name="friend">Friend</string>
+    <string name="aleatorio">Aleatorio</string>
+    <string name="perritos">Perritos</string>
+    <string name="nosotros">Nosotros</string>
+    <string name="buscar">Buscar</string>
+    <string name="adoptame">Adoptame</string>
 
 </resources>
