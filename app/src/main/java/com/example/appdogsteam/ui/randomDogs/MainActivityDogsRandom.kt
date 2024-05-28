@@ -26,15 +26,35 @@ class MainActivityDogsRandom : AppCompatActivity() {
         }
         callRandomDogs()
         observerRandomDogs()
+        actions()
+        navigation()
     }
     private fun callRandomDogs() {
         viewModel.getImageDogRandom()
     }
-
     private fun observerRandomDogs() {
         viewModel.data.observe(this) {
             val imageUrl = it.data
             Picasso.get().load(imageUrl).into(binding.imgBtnDog)
+        }
+        /*.data.observe(this) { result ->
+            val imageUrl = result.data
+            Glide.with(this)
+                .load(imageUrl)
+                .apply(RequestOptions.bitmapTransform(CircleCrop()))
+                .into(binding.imgBtnDog)
+        }
+
+         */
+    }
+    private fun actions(){
+        binding.btnHuellita.setOnClickListener{
+            callRandomDogs()
+        }
+    }
+    private fun navigation(){
+        binding.btnBack.setOnClickListener {
+            finish()
         }
     }
 }
