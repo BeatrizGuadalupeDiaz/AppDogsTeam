@@ -8,6 +8,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.appdogsteam.databinding.ActivityMainBinding
 import com.example.appdogsteam.ui.randomDogs.MainActivityDogsRandom
+import com.example.appdogsteam.ui.randomDogs.MainActivitySerachDogsRace
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding : ActivityMainBinding
@@ -26,6 +27,9 @@ class MainActivity : AppCompatActivity() {
     private fun navigation() {
         binding.btnRandomDogs.setOnClickListener {
             startActivity(Intent(this, MainActivityDogsRandom::class.java))
+        }
+        binding.btnSearchDogsRace.setOnClickListener {
+            startActivity(Intent(this, MainActivitySerachDogsRace::class.java))
         }
     }
 }
