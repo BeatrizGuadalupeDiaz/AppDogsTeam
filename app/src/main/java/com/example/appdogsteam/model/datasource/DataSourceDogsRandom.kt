@@ -8,7 +8,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 class DataSourceDogsRandom {
-    private val url = "https://dog.ceo/api/breed/"
+    private val url = "https://dog.ceo/api/breeds/"
     private val retrofit = Retrofit.Builder()
         .baseUrl(url)
         .client(OkHttpClient())
@@ -17,7 +17,6 @@ class DataSourceDogsRandom {
 
     private val serviceDogs = retrofit.create(HomeServiceRandom
     ::class.java)
-
     suspend fun getImageRandom():Response<ResponseRandomDogs>{
         return serviceDogs.getImageRandomDogs()
     }

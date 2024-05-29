@@ -1,6 +1,5 @@
 package com.example.appdogsteam.model.datasource
 
-import com.example.appdogs.model.service.HomeServiceRandom
 import com.example.appdogsteam.model.response.ResponseRandomDogs
 import com.example.appdogsteam.model.service.HomeServiceInicio
 import okhttp3.OkHttpClient
