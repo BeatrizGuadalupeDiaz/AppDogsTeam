@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.appdogsteam.databinding.ActivityMainBinding
-import com.example.appdogsteam.ui.randomDogs.MainActivityDogsRandom
+import com.example.appdogsteam.ui.randomDogs.viewmodel.MainActivityDogsRandom
 import com.example.appdogsteam.ui.randomDogs.MainActivitySerachDogsRace
 
 class MainActivity : AppCompatActivity() {

@@ -63,5 +63,7 @@ dependencies {
     //img redondeada
     //implementation("com.github.bumptech.glide:glide:4.12.0")
     //annotationProcessor("com.github.bumptech.glide:compiler:4.12.0")
+    //recyclerview
+    implementation("androidx.recyclreview:recyclerview:1.2.1")
 
 }
