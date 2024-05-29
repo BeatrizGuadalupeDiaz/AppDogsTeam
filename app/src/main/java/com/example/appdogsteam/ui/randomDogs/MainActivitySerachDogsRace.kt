@@ -2,14 +2,19 @@ package com.example.appdogsteam.ui.randomDogs
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.SearchView
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.appdogsteam.R
+import com.example.appdogsteam.data.dogsRandom.ContentViewModelSearchDogBreed
+import com.example.appdogsteam.data.dogsRandom.DogName
 import com.example.appdogsteam.databinding.ActivityMainSerachDogsRaceBinding
 import com.squareup.picasso.Picasso
 
 class MainActivitySerachDogsRace : AppCompatActivity() {
+    private val viewModel by viewModels<ContentViewModelSearchDogBreed>()
     private lateinit var binding: ActivityMainSerachDogsRaceBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         binding = ActivityMainSerachDogsRaceBinding.inflate(layoutInflater)
@@ -21,19 +26,53 @@ class MainActivitySerachDogsRace : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        callRandomDogs()
-        observerRandomDogs()
+        callSearchDogBreed()
+        observerSearchDogBreed()
         actions()
         navigation()
-    }
-    private fun callRandomDogs() {
-    }
-    private fun observerRandomDogs() {
-    }
-    private fun actions(){
+        println(DogName.dogName+" - name dog")
+
+        //igualar el valor de la img del perrito en el imgview
+        //binding.imgBtnDog = callRandomDogs()
+
 
     }
-    private fun navigation(){
+
+    private fun callSearchDogBreed() {
+        viewModel.getImageDogBreed()
+    }
+
+    private fun observerSearchDogBreed() {
+        viewModel.data.observe(this) {
+            val imageUrl = it.data
+            Picasso.get().load(imageUrl).into(binding.imgBtnDog)
+        }
+    }
+
+    private fun actions() {
+        binding.searchViewDog.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(breedDog: String): Boolean {
+                binding.searchViewDog.clearFocus()
+                breedDog?.let {
+                    println("Texto ingresado: $it")
+                }
+                    DogName.dogName = breedDog
+                //verificar si la raza existe que lo muestra
+
+                return false
+            }
+
+            override fun onQueryTextChange(breedDog: String?): Boolean {
+                //mostar un perrito por defecto
+                breedDog?.let {
+                    println("Texto ingresado 2: $it")
+                }
+                return false
+            }
+        })
+    }
+
+    private fun navigation() {
         binding.btnBack.setOnClickListener {
             finish()
         }

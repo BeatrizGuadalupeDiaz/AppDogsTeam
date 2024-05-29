@@ -2,17 +2,17 @@ package com.example.appdogsteam.data.dogsRandom
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.appdogsteam.model.repository.RepositoryDogsRandom
+import com.example.appdogsteam.model.repository.RepositorySearchDogsBreed
 import com.example.appdogsteam.model.response.ResponseRandomDog
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-class ContentViewModelRandomDogs(private val dogsRepositoryDogsRandom: RepositoryDogsRandom = RepositoryDogsRandom()):ViewModel(){
+class ContentViewModelSearchDogBreed(private val dogsRepositorySearchDogsBreed: RepositorySearchDogsBreed=RepositorySearchDogsBreed()):ViewModel(){
     val data = MutableLiveData<ResponseRandomDog>()
 
-    fun getImageDogRandom(){
+    fun getImageDogBreed(){
         CoroutineScope(Dispatchers.IO).launch {
-            val result = dogsRepositoryDogsRandom.getImageDogs()
+            val result = dogsRepositorySearchDogsBreed.getImageDogBreed()
             data.postValue(result.body())
         }
     }
