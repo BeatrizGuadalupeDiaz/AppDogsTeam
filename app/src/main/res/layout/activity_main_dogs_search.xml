@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivityDogsSearch">
+
+    <View
+        android:id="@+id/vw_fondodogosearch"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"/>
+
+    <TextView
+        android:id="@+id/tv_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/search"
+        android:textSize="35sp"
+        android:textColor="@color/orange_title"
+        android:textStyle="bold"
+        android:layout_marginStart="25dp"
+        app:layout_constraintStart_toStartOf="@+id/vw_fondodogosearch"
+        app:layout_constraintTop_toTopOf="@id/vw_fondodogosearch"
+        android:layout_marginTop="50dp"/>
+
+    <TextView
+        android:id="@+id/tv_friend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/friend"
+        android:textSize="35sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tv_search"
+        app:layout_constraintTop_toTopOf="@id/vw_fondodogosearch"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="115dp"/>
+
+    <EditText
+        android:id="@+id/et_search"
+        android:layout_width="320dp"
+        android:layout_height="45dp"
+        android:background="@drawable/radius"
+        android:drawableStart="@drawable/lupa"
+        android:text="@string/searc"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_friend"
+        android:layout_marginTop="80dp"/>
+
+    <TextView
+        android:id="@+id/tv_flecha"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:background="@drawable/buttonform3"
+        android:paddingEnd="20dp"
+        app:drawableEndCompat="@drawable/icon_back"
+        app:layout_constraintBottom_toBottomOf="@id/vw_fondodogosearch"
+        app:layout_constraintEnd_toEndOf="@id/vw_fondodogosearch"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="35dp"
+        tools:ignore="RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/tv_volver"
+        android:layout_width="220dp"
+        android:layout_height="60dp"
+        android:background="@drawable/buttonform"
+        android:text="Volver"
+        android:textAlignment="textStart"
+        android:paddingStart="20dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/vw_fondodogosearch"
+        app:layout_constraintStart_toStartOf="@+id/vw_fondodogosearch"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="35dp"
+        tools:ignore="RtlCompat,RtlSymmetry" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

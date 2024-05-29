@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivityHome">
+
+    <View
+        android:id="@+id/vw_fondoInicio"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"/>
+
+    <ImageView
+        android:id="@+id/iv_lineas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/lineas"
+        app:layout_constraintTop_toTopOf="@+id/vw_fondoInicio"
+        app:layout_constraintStart_toStartOf="@+id/vw_fondoInicio"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"/>
+
+    <TextView
+        android:id="@+id/tv_inicio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/search"
+        android:textSize="35sp"
+        android:textColor="@color/orange_title"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/iv_lineas"
+        app:layout_constraintTop_toTopOf="@id/iv_lineas"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:id="@+id/tv_inicio2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/friend"
+        android:textSize="35sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tv_inicio"
+        app:layout_constraintTop_toTopOf="@id/iv_lineas"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="115dp"/>
+
+    <TextView
+        android:id="@+id/tv_aleatorio"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:text="@string/aleatorio"
+        android:textSize="16sp"
+        android:background="@drawable/buttonform3"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="@+id/vw_fondoInicio"
+        app:layout_constraintTop_toTopOf="@id/tv_inicio"
+        android:layout_marginTop="90dp"
+        android:layout_marginStart="15dp"/>
+
+    <TextView
+        android:id="@+id/tv_perritos"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:text="@string/perritos"
+        android:textColor="@color/white"
+        android:background="@drawable/buttonform"
+        android:gravity="center"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_aleatorio"
+        app:layout_constraintTop_toTopOf="@id/tv_inicio"
+        android:layout_marginTop="90dp"
+        android:layout_marginStart="100dp"/>
+
+    <TextView
+        android:id="@+id/tv_nosotros"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:text="@string/nosotros"
+        android:background="@drawable/buttonform3"
+        android:textSize="16sp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="@+id/tv_perritos"
+        app:layout_constraintTop_toTopOf="@id/tv_inicio"
+        android:layout_marginTop="90dp"
+        android:layout_marginStart="100dp"/>
+
+    <TextView
+        android:id="@+id/tv_buscar"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:text="@string/buscar"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:background="@drawable/buttonform2"
+        app:layout_constraintStart_toStartOf="@+id/tv_nosotros"
+        app:layout_constraintTop_toTopOf="@id/tv_inicio"
+        android:layout_marginTop="90dp"
+        android:layout_marginStart="100dp"/>
+
+    <TextView
+        android:id="@+id/tv_adoptar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/adoptame"
+        android:textSize="35sp"
+        android:textColor="@color/orange_title"
+        app:layout_constraintStart_toStartOf="@+id/tv_inicio"
+        app:layout_constraintTop_toTopOf="@id/tv_aleatorio"
+        android:layout_marginTop="150dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
