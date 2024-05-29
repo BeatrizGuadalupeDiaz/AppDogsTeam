@@ -6,28 +6,32 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.appdogsteam.R
+import com.squareup.picasso.Picasso
 
 class AdapterList (private val list: List<String>, private val onClick: (String) -> Unit): RecyclerView.Adapter<ViewHolderList>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(context).inflate(R.layout.itemperritos, parent, false)
-        return ViewHolder(view)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolderList {
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.itemdogs, parent, false)
+        return ViewHolderList(view)
     }
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val images = listaPerritos[position]
-        holder.image1.setImageResource(images[0])
-        holder.image1.setImageResource(images[1])
-        holder.image1.setImageResource(images[2])
+    override fun onBindViewHolder(holder: ViewHolderList, position: Int) {
+        holder.render(list[position], onClick)
     }
 
     override fun getItemCount(): Int {
-        return listaPerritos.size
+        return list.size
     }
 }
-inner class ViewHolder(view: View): RecyclerView.ViewHolder(view){
+ class ViewHolderList(view: View): RecyclerView.ViewHolder(view){
 
-    val image1: ImageView = view.findViewById(R.id.iv_image1)
-    val image2: ImageView = view.findViewById(R.id.iv_image2)
-    val image3: ImageView = view.findViewById(R.id.iv_image3)
+     private val binding = ItemListBinding.bind(View)
+
+   fun render(item: String, onClick: (String) -> Unit){
+       Picasso.get().load(item).into(binding.ivImage)
+       binding.ivImage.setOnClickListener {
+           onClick(item)
+       }
+   }
 }
