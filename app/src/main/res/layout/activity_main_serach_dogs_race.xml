@@ -8,20 +8,33 @@
     tools:context=".ui.randomDogs.MainActivitySerachDogsRace">
 
     <TextView
-        android:id="@+id/tv_title_searchFriends"
+        android:id="@+id/tv_title_searchFriends1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="40dp"
         android:shadowColor="#80000000"
-        android:shadowDx="2"
-        android:shadowDy="2"
         android:shadowRadius="4"
-        android:text="@string/title_searchFriend"
+        android:text="@string/search"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:textColor="@color/orange_title"
+        app:layout_constraintBottom_toBottomOf="@id/line1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/tv_title_searchFriends2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="40dp"
+        android:shadowColor="#80000000"
+        android:shadowRadius="4"
+        android:text="@string/friend"
         android:textSize="35sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@id/line1"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_title_searchFriends1"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.SearchView
