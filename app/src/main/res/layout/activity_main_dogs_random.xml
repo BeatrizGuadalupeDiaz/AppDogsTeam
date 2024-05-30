@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.randomDogs.viewmodel.MainActivityDogsRandom">
+    tools:context=".ui.randomDogs.MainActivityDogsRandom">
 
     <TextView
         android:id="@+id/tv_title_searchFriends1"
@@ -90,13 +90,13 @@
         android:layout_marginHorizontal="30dp"
         android:layout_marginBottom="20dp"
         android:background="@drawable/rounded_button"
-        android:drawableEnd="@drawable/icon_back"
-        android:drawableTint="@color/orange_title"
-        android:drawablePadding="30dp"
+        android:drawableEnd="@drawable/icon_btn_back_size"
+        android:drawableTint="@color/black"
+        android:drawablePadding="10dp"
         android:paddingHorizontal="20dp"
         android:text="@string/text_btn_back"
         android:textAlignment="textStart"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

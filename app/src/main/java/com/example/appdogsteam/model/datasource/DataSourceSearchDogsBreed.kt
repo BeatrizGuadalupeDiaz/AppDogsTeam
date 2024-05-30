@@ -1,7 +1,6 @@
 package com.example.appdogsteam.model.datasource
 
 import com.example.appdogs.model.service.HomeServiceSearchBreed
-import com.example.appdogsteam.data.dogsRandom.DogName
 import com.example.appdogsteam.model.response.ResponseRandomDogs
 import okhttp3.OkHttpClient
 import retrofit2.Response
@@ -18,7 +17,7 @@ class DataSourceSearchDogsBreed {
 
     private val serviceDogs = retrofit.create(HomeServiceSearchBreed
     ::class.java)
-    suspend fun getImageDogBreed():Response<ResponseRandomDogs>{
-        return serviceDogs.getImageSearchDogsBreed(DogName.dogName)
+    suspend fun getImageDogBreed(breedDog: String):Response<ResponseRandomDogs>{
+        return serviceDogs.getImageSearchDogsBreed(breedDog)
     }
 }

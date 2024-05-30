@@ -1,4 +1,4 @@
-package com.example.appdogsteam.ui.randomDogs.viewmodel
+package com.example.appdogsteam.ui.randomDogs
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge

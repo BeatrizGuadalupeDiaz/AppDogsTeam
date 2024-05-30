@@ -18,7 +18,7 @@
             android:name=".MainActivityDogsSearch"
             android:exported="true"/>
         <activity
-            android:name=".ui.randomDogs.viewmodel.MainActivityDogsRandom"
+            android:name=".ui.randomDogs.MainActivityDogsRandom"
             android:exported="true"/>
         <activity
             android:name=".ui.randomDogs.MainActivitySerachDogsRace"

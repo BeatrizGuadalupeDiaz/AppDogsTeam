@@ -10,9 +10,9 @@ import kotlinx.coroutines.launch
 class ContentViewModelSearchDogBreed(private val dogsRepositorySearchDogsBreed: RepositorySearchDogsBreed=RepositorySearchDogsBreed()):ViewModel(){
     val data = MutableLiveData<ResponseRandomDogs>()
 
-    fun getImageDogBreed(){
+    fun getImageDogBreed(breedDog: String = "boxer") {
         CoroutineScope(Dispatchers.IO).launch {
-            val result = dogsRepositorySearchDogsBreed.getImageDogBreed()
+            val result = dogsRepositorySearchDogsBreed.getImageDogBreed(breedDog)
             data.postValue(result.body())
         }
     }

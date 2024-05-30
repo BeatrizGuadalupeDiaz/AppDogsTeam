@@ -1,5 +1,18 @@
-<?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <corners android:radius="100dp" /> <!-- Ajusta el radio según el redondeo que desees -->
-    <solid android:color="@color/white" /> <!-- Color del lado izquierdo -->
-</shape>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:top="0dp" android:bottom="0dp" android:left="0dp" android:right="50dp">
+        <shape>
+            <gradient
+                android:startColor="#000000"
+                android:endColor="#000000"
+                android:angle="0"/>
+            <corners android:bottomLeftRadius="40dp" android:topLeftRadius="40dp"/>
+        </shape>
+    </item>
+    <!-- Mitad blanca -->
+    <item android:top="0dp" android:bottom="0dp" android:left="200dp" android:right="0dp">
+        <shape>
+            <corners android:bottomRightRadius="40dp" android:topRightRadius="40dp"/>
+            <solid android:color="#fff"/>
+        </shape>
+    </item>
+</layer-list>

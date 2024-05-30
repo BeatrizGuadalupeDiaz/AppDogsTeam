@@ -9,7 +9,6 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.appdogsteam.R
 import com.example.appdogsteam.data.dogsRandom.ContentViewModelSearchDogBreed
-import com.example.appdogsteam.data.dogsRandom.DogName
 import com.example.appdogsteam.databinding.ActivityMainSerachDogsRaceBinding
 import com.squareup.picasso.Picasso
 
@@ -30,12 +29,6 @@ class MainActivitySerachDogsRace : AppCompatActivity() {
         observerSearchDogBreed()
         actions()
         navigation()
-        println(DogName.dogName+" - name dog")
-
-        //igualar el valor de la img del perrito en el imgview
-        //binding.imgBtnDog = callRandomDogs()
-
-
     }
 
     private fun callSearchDogBreed() {
@@ -53,20 +46,11 @@ class MainActivitySerachDogsRace : AppCompatActivity() {
         binding.searchViewDog.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(breedDog: String): Boolean {
                 binding.searchViewDog.clearFocus()
-                breedDog?.let {
-                    println("Texto ingresado: $it")
-                }
-                    DogName.dogName = breedDog
-                //verificar si la raza existe que lo muestra
-
+                    viewModel.getImageDogBreed(breedDog)
                 return false
             }
 
             override fun onQueryTextChange(breedDog: String?): Boolean {
-                //mostar un perrito por defecto
-                breedDog?.let {
-                    println("Texto ingresado 2: $it")
-                }
                 return false
             }
         })
