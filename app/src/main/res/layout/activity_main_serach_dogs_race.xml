@@ -71,19 +71,17 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.85" />
 
-    <ImageView
-        android:id="@+id/img_btn_dog"
+    <include
+        android:id="@+id/ic_img_btn_dog"
+        layout="@layout/item_image_dog"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginHorizontal="30dp"
         android:layout_marginTop="40dp"
-        android:background='@drawable/rounded_img'
-        android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="@id/line3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/line2"
-        tools:ignore="ContentDescription" />
+        app:layout_constraintTop_toTopOf="@id/line2"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_back"

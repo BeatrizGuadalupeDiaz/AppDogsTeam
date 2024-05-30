@@ -35,17 +35,8 @@ class MainActivityDogsRandom : AppCompatActivity() {
     private fun observerRandomDogs() {
         viewModel.data.observe(this) {
             val imageUrl = it.data
-            Picasso.get().load(imageUrl).into(binding.imgBtnDog)
+            Picasso.get().load(imageUrl).into(binding.icImgBtnDog.ivImgDog)
         }
-        /*.data.observe(this) { result ->
-            val imageUrl = result.data
-            Glide.with(this)
-                .load(imageUrl)
-                .apply(RequestOptions.bitmapTransform(CircleCrop()))
-                .into(binding.imgBtnDog)
-        }
-
-         */
     }
     private fun actions(){
         binding.btnHuellita.setOnClickListener{

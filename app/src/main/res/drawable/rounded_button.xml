@@ -1,18 +1,28 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:top="0dp" android:bottom="0dp" android:left="0dp" android:right="50dp">
+    <item
+        android:bottom="0dp"
+        android:left="0dp"
+        android:right="50dp"
+        android:top="0dp">
         <shape>
-            <gradient
-                android:startColor="#000000"
-                android:endColor="#000000"
-                android:angle="0"/>
-            <corners android:bottomLeftRadius="40dp" android:topLeftRadius="40dp"/>
+            <corners android:radius="40dp" />
+            <solid android:color="#000" />
         </shape>
     </item>
     <!-- Mitad blanca -->
-    <item android:top="0dp" android:bottom="0dp" android:left="200dp" android:right="0dp">
+    <item
+        android:bottom="0dp"
+        android:left="200dp"
+        android:right="0dp"
+        android:top="0dp">
         <shape>
-            <corners android:bottomRightRadius="40dp" android:topRightRadius="40dp"/>
-            <solid android:color="#fff"/>
+            <gradient
+                android:angle="0"
+                android:endColor="#fff"
+                android:startColor="#fff" />
+            <corners
+                android:bottomLeftRadius="40dp"
+                android:topLeftRadius="40dp" />
         </shape>
     </item>
 </layer-list>

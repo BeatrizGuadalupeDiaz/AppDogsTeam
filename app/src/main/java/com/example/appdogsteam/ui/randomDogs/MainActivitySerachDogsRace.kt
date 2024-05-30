@@ -38,7 +38,7 @@ class MainActivitySerachDogsRace : AppCompatActivity() {
     private fun observerSearchDogBreed() {
         viewModel.data.observe(this) {
             val imageUrl = it.data
-            Picasso.get().load(imageUrl).into(binding.imgBtnDog)
+            Picasso.get().load(imageUrl).into(binding.icImgBtnDog.ivImgDog)
         }
     }
 
@@ -46,7 +46,7 @@ class MainActivitySerachDogsRace : AppCompatActivity() {
         binding.searchViewDog.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(breedDog: String): Boolean {
                 binding.searchViewDog.clearFocus()
-                    viewModel.getImageDogBreed(breedDog)
+                viewModel.getImageDogBreed(breedDog)
                 return false
             }
 
